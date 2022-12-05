@@ -1,0 +1,16 @@
+<title>Add New Movie</title>
+{% extends 'base.html' %}
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label><b>MOVIE NAME</b></label><br>
+    <input type="text" name="name" placeholder="Enter the movie name"><br>
+    <label><b>MOVIE DESCRIPTION</b></label><br>
+    <input type="text" name="desc" placeholder="Enter the movie description"><br>
+    <label><b>MOVIE YEAR</b></label><br>
+    <input type="number" name="year" placeholder="Enter the movie name"><br>
+    <label><b>MOVIE IMAGE</b></label><br>
+    <input type="file" name="image"><br><br>
+    <input type="submit">
+</form>
+{% endblock %}
